@@ -1,0 +1,8 @@
+  div {
+    text-align: left;
+    border-style: dotted;
+    width: 750px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    margin: auto;
+  }
