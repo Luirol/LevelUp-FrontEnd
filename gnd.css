@@ -6,3 +6,9 @@
     box-sizing: border-box;
     margin: auto;
   }
+  table {
+    border-collapse: collapse;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
