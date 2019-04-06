@@ -1,11 +1,33 @@
-  div {
+  form {
     text-align: left;
-    /* border-style: dotted; */
+    /* border-style: dotted; /*Посмотреть границы формы */
     width: 600px;
     padding: 0 5px;
     box-sizing: border-box;
     margin: auto;
+    font-size : 1em;
+    font-style : normal;
+    font-weight : 400;
   }
+  titleBody {
+    font-size : 1em;
+    font-style : normal;
+    font-weight : bolder;
+  }
+  a { text-decoration: none; outline:none;} /* Отменяю подчеркивание у ссылки */
+  /* a:link { color: red; } */
+  a:visited { color: grey; }
+  a:hover { color: blue; }
+  a:active { background-color: yellow; outline: none;}
+  a:focus { outline: none; }
+  input {outline:none;}
+  input:active {outline:none;}
+  :focus {outline:none;}
+  /*
+  div {
+    border-style: dotted;
+  }
+  */
   table {
     border-collapse: collapse;
   }
@@ -18,3 +40,18 @@
     border-radius: 25px;
     background: #73AD21;
   }
+
+  input {
+    /*background: #000; */
+    background-image: linear-gradient(white,gray);
+    }
+    .boxShadow {
+      /*border-radius: 10px;*/
+      background: rgb(100,100,100) radial-gradient(circle at 0 0, rgba(255,255,255,.65), rgba(255,255,255,.35));
+      box-shadow:
+       inset rgba(0,0,0,.5) -3px -3px 8px,
+       inset rgba(255,255,255,.9) 3px 3px 8px,
+       rgba(0,0,0,.8) 3px 3px 8px -3px;
+    }
+    input, button { cursor: pointer; }
+    button:hover {opacity: 0.8}
