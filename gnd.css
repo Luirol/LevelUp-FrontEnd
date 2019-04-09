@@ -1,7 +1,8 @@
   form {
     text-align: left;
     /* border-style: dotted; /*Посмотреть границы формы */
-    width: 600px;
+    width: 800px;
+    height: 600px;
     padding: 0 5px;
     box-sizing: border-box;
     margin: auto;
@@ -9,12 +10,19 @@
     font-style : normal;
     font-weight : 400;
   }
-  span.b {
+  body span.b {
     font-size : 1em;
     font-style : normal;
-    font-weight : bolder; 
+    font-weight : bolder;
+    padding: 5px 0px 5px 0px;
   }
 
+  .flex-conteiner{
+  display: flex;
+  flex-wrap: wrap;
+  /*flex-direction: column;*/
+  align-content: space-around;
+}
   a { text-decoration: none; outline:none;} /* Отменяю подчеркивание у ссылки */
   /* a:link { color: red; } */
   a:visited { color: grey; }
@@ -33,11 +41,12 @@
     border-collapse: collapse;
   }
   table, th, td {
-    padding: 0 5px;
+    /*padding: 0 5px;*/
     border: 1px solid black;
   }
   tr:hover {background-color: #f5f5f5;}
   #button {
+    margin: 5px 0px 0px 0px;
     border-radius: 25px;
     background: #73AD21;
   }
