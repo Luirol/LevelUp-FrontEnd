@@ -7,16 +7,21 @@
 	/*The branch is flexBox*/
 </head>
 <body>
-<form action="formJFD.html" method="post">
 
-<h2> Вакансия: Junior Frontend Developer </h2>
-<div>
-	<img src="photo.jpg" align="left" alt="ФОТО" width="104" height="142" border="0" hspace= "10">
-	<span class="b">  Имя: </span> Олег
-	<h6> <a href="https://github.com/Luirol/LevelUp-FrontEnd" target="_blank" > Ссылка на репозиторий в GitHub </a>  </h6>
-	<span class = "b">Опыт работы: </span> нет <br>
-	<span class = "b"> Дата собеседования </span> <input type='DATE'> <br>
+<div style="display: inline-flex; flex-flow: row wrap; align-content: space-around;">
+	<h2> Вакансия: Junior Frontend Developer 1111111 111111111 33333333 333333333  4444444 444444444</h2>
 </div>
+
+<div class="flex-conteiner-row">
+	<div> <img src="photo.jpg" alt="ФОТО" width="70" height="90" border="0" hspace= "10""> </div>
+	<div class="flex-conteiner-column">
+		<div>	<span class="b">  Имя: </span> Олег </div>
+		<div>	<h6 style="margin: 0;"> <a href="https://github.com/Luirol/LevelUp-FrontEnd" target="_blank" > Ссылка на репозиторий в GitHub </a>  </h6></div>	
+		<div>	<span class = "b">Опыт работы: </span> нет </div>
+		<div>	<span class = "b"> Дата собеседования </span> <input type='DATE'> </div>	
+	</div>
+</div>
+<div class="flex-conteiner-column"></div>
 <div>
 	<span class = "b"> Уровень английского: </span> <br>
 	<input type='radio' name='Level-english' value = '0'> Плохо
@@ -86,9 +91,11 @@
     <td>2015 - 2020</td>
     <td>Бирмингемский университет</td>
 	</tr>
+	
 </tbody>
 </table>
 </div>
+</div">
 <div>
 	<br>
 	<button id="button" style="float: right;" type="submit"> Отправить </button>
