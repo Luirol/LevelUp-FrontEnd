@@ -161,53 +161,66 @@ myArray = ['Один','Два','Три','Четыре','Пять','Шесть','
 //
 myArray =""; myMessage = ""; i = 0; myWidth=0; str=""; valueArray=0; a=0; b=0; total =0; l=0; //Очистил для повторного использования
 console.log();
-//7777777777777777777777777777777777777777777777777777777777777777777
-console.log('7. Список: //7777777777777777777777777777777777777777777');
-console.log("7.1 --> arrayToList:", arrayToList ([1, 2, 3]));
-//
-//function arrayToList (paramArray) //создает список из массива
-function arrayToList (paramArray) {
-  let list = {};
+// //7777777777777777777777777777777777777777777777777777777777777777777
+// console.log('7. Список: //7777777777777777777777777777777777777777777');
+// console.log("7.1 --> arrayToList:", arrayToList ([1, 2, 3]));
+// //
+// //function arrayToList (paramArray) //создает список из массива
+// function arrayToList (paramArray) {
+//   let list = {};
+//   let _value;
+//   let _next = null; //временная переменная //запоминаю текущий next
+//   for (i=paramArray.length; i>=0 ;i--)
+//       _value = paramArray[key];
+//       list.value = _value;
+//       list.next = _next;
+//       //
+//       _next =list.
+//       alert( paramArray[key] );
+//   }
+
+//   list.head = {};
+//   list.value = 
                         
-return list;
-}
-//
-const list = {head: {value:12, next:{value:99, next:{value:37, next:null}}}}
-console.log("7.2 7.2 --> listToArray:", listToArray (list));
-//function listToArray (paramList) //создаёт массив из списка
-function listToArray (paramList) {
-  let map = new Map();
-    if (typeof(paramList) == "object") {
-      for (key in paramList) {
-        value = paramList[key];
-        console.log("|",key,"|", value,"|", typeof(value),"|");
-        if (typeof(value) != "object") {
-          map.set(key, value); //здесь рекурсией получить значение
-        } else {
+// return list;
+// }
+// //
+// const list = {head: {value:12, next:{value:99, next:{value:37, next:null}}}}
+// console.log("7.2 7.2 --> listToArray:", listToArray (list));
+// //function listToArray (paramList) //создаёт массив из списка
+// function listToArray (paramList) {
+//   let map = new Map();
+//     if (typeof(paramList) == "object") {
+//       for (key in paramList) {
+//         value = paramList[key];
+//         console.log("|",key,"|", value,"|", typeof(value),"|");
+//         if (typeof(value) != "object") {
+//           map.set(key, value); //здесь рекурсией получить значение
+//         } else {
 
-        } //if (typeof(value) != "object")
-      } //for (key1 in obj1)
-    } //if (typeof(paramList) != "object")
-return map;
-} //function listToArray (paramList)
+//         } //if (typeof(value) != "object")
+//       } //for (key1 in obj1)
+//     } //if (typeof(paramList) != "object")
+// return map;
+// } //function listToArray (paramList)
 
 
 
-//function prepend (paramList) //получает элемент и создаёт новый список, где
-//этот элемент добавлен спереди к первоначальному списку
-function prepend (paramList) {
-  newList = {};
+// //function prepend (paramList) //получает элемент и создаёт новый список, где
+// //этот элемент добавлен спереди к первоначальному списку
+// function prepend (paramList) {
+//   newList = {};
                         
-  return newList;
-}
+//   return newList;
+// }
 
-//function nth(paramList, paramPositionNumber // качестве аргументов принимает список и число,
-//а возвращает элемент на заданной позиции в списке или же undefined в случае отсутствия такого элемента
-function nth(paramList, paramPositionNumber) {
-  let element;
+// //function nth(paramList, paramPositionNumber // качестве аргументов принимает список и число,
+// //а возвращает элемент на заданной позиции в списке или же undefined в случае отсутствия такого элемента
+// function nth(paramList, paramPositionNumber) {
+//   let element;
                         
-  return element;
-}
+//   return element;
+// }
 console.log();
 //8888888888888888888888888888888888888888888888888888888888888888888
 console.log('8. deepEqual: //8888888888888888888888888888888888888888');
@@ -224,6 +237,11 @@ a=false; b=null; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")
 a=false; b='1'; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")="+b+") =", deepEqual (a, b));
 a=[1,2,3]; b=[1,2,3]; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")="+b+") =", deepEqual (a, b));
 a=[1,1,1]; b=[3,3,3]; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")="+b+") =", deepEqual (a, b));
+console.log("-----------------------------------------------------");
+a=isEven; b=isEven; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")="+b+") =", deepEqual (a, b));
+console.log("-----------------------------------------------------");
+a=isEven; b=reverseArray; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")="+b+") =", deepEqual (a, b));
+console.log("-----------------------------------------------------");
 //function deepEqual (obj1, obj2) //принимает два значения и
 //возвращает true, только если это два одинаковых значения или это объекты, свойства которых имеют одинаковые значения
 function deepEqual (obj1, obj2) {
@@ -236,12 +254,13 @@ function deepEqual (obj1, obj2) {
       return "это точно false т.к. структуры разные и далее сравнивать не имеет смысла!";
     } else {
       switch (type1) {
-        case "undefined" : true;
+        case "undefined" : return false; //ремлю, т.к. true отработает в первой строке процедуры //: return true;
         //Антон, каким образом указать несколько значений для case?
         //case "number", "boolean", "string" : return (obj1 == obj2)? true:false; //так не срабатывает!
-        case "number" : return (obj1 == obj2)? true:false;
-        case "boolean" : return (obj1 == obj2)? true:false;
-        case "string" : return (obj1 == obj2)? true:false;
+        case "number" : return false; //ремлю, т.к. true отработает в первой строке процедуры //case "number" : return (obj1 == obj2)? true:false;
+        case "boolean" : return false; //ремлю, т.к. true отработает в первой строке процедуры //case "boolean" : return (obj1 == obj2)? true:false;
+        case "string" : return false; //ремлю, т.к. true отработает в первой строке процедуры //case "string" : return (obj1 == obj2)? true:false;
+        case "function" : return false; //ремлю, т.к. true отработает в первой строке процедуры //case "function" : return (obj1 == obj2)? true:false;
         case "object" :
                         //ремлю, т.к. null отработает в первой строке процедуры
                         // if ((obj1 === null) && (obj2 === null)) {
@@ -264,8 +283,6 @@ function deepEqual (obj1, obj2) {
                             return true;
                         } //if (counter1 != counter2)
                         ;
-        case "function" :
-                            
         default : false;
       } //switch (type1)
     } //if (type1 !== type2)
