@@ -163,62 +163,71 @@ myArray =""; myMessage = ""; i = 0; myWidth=0; str=""; valueArray=0; a=0; b=0; t
 console.log();
 //7777777777777777777777777777777777777777777777777777777777777777777
 console.log('7. Список: //7777777777777777777777777777777777777777777');
-console.log("7.1 --> arrayToList:", arrayToList ([12, 99, 37]));
+console.log("7.1.1 --> arrayToList:", arrayToList ([12, 99, 37]));
+console.log("7.1.2 --> arrayToList:", arrayToList ([1, 2, 3]));
 //
 //function arrayToList (paramArray) //создает список из массива
 function arrayToList (paramArray) {
   let _list = {};
-  let _next = {next:null}; //временная переменная //запоминаю последний NEXT //первоначально null //затем переопределяю на структуру
   for (i=paramArray.length-1; i>=0 ;i--) {
     _list = prepend(paramArray[i], _list);
-    // _list.value = paramArray[i];
-    // _list.next = _next.next;
-    // //
-    // _next.next = _list;
-    // console.log("i=", i,'|', 'value=',paramArray[i] ,'|',"_next =", _next,'|',"_list =", _list);
-  } //for (i=paramArray.length; i>=0 ;i--)
-  //
+  }
   return {head:_list};
 } //function arrayToList (paramArray)
 //
 console.log('========================================');
-const list = {head: {value:12, next:{value:99, next:{value:37, next:null}}}}
-console.log("7.2 7.2 --> listToArray:", listToArray (list));
+console.log("7.2.1 --> listToArray:", listToArray ({head: {value:12, next:{value:99, next:{value:37, next:null}}}}));
+console.log("7.2.1 --> listToArray:", listToArray ({head: {value:1, next:{value:2, next:{value:3, next:null}}}}));
 //function listToArray (paramList) //создаёт массив из списка
 function listToArray (paramList) {
   let map = new Map();
-    if (typeof(paramList) == "object") {
-      for (key in paramList) {
-        value = paramList[key];
-        console.log("|",key,"|", value,"|", typeof(value),"|");
-        if (typeof(value) != "object") {
-          map.set(key, value); //здесь рекурсией получить значение
-        } else {
+    // if (typeof(paramList) == "object") {
+    //   for (key in paramList) {
+    //     value = paramList[key];
+    //     console.log("|",key,"|", value,"|", typeof(value),"|");
+    //     if (typeof(value) != "object") {
+    //       map.set(key, value); //здесь рекурсией получить значение
+    //     } else {
 
-        } //if (typeof(value) != "object")
-      } //for (key1 in obj1)
-    } //if (typeof(paramList) != "object")
+    //     } //if (typeof(value) != "object")
+    //   } //for (key1 in obj1)
+    // } //if (typeof(paramList) != "object")
 return map;
 } //function listToArray (paramList)
 
-console.log("7.... --> prepend (paramValue, paramList):", prepend (37, null));
-console.log("7.... --> prepend (paramValue, paramList):", prepend (99, prepend (37, null)));
-console.log("7.... --> prepend (paramValue, paramList):", prepend (12, prepend (99, prepend (37, null))));
+console.log("7.test функции prepend (paramValue, paramList):", prepend (37, {}));
+console.log("7.test функции prepend (paramValue, paramList):", prepend (99, prepend (37, {})));
+console.log("7.test функции prepend (paramValue, paramList):", prepend (12, prepend (99, prepend (37, {}))));
 //function prepend (paramList) //получает элемент и создаёт новый список, где
 //этот элемент добавлен спереди к первоначальному списку
 function prepend (paramValue, paramList) {
   newList = {};
   newList.value = paramValue;
-  newList.next = paramList;
+  if (paramList.value == undefined) {
+    newList.next = null;
+  } else {
+    newList.next = paramList;
+  }
+  //console.log('-=-',newList);
   return newList;
 }
-
-//function nth(paramList, paramPositionNumber // качестве аргументов принимает список и число,
+console.log("7.test функции nth (paramList, paramPositionNumber=1):", nth ({head: {value:12, next:{value:99, next:{value:37, next:null}}}},1));
+console.log("7.test функции nth (paramList, paramPositionNumber=2):", nth ({head: {value:12, next:{value:99, next:{value:37, next:null}}}},2));
+console.log("7.test функции nth (paramList, paramPositionNumber=3):", nth ({head: {value:12, next:{value:99, next:{value:37, next:null}}}},3));
+console.log("7.test функции nth (paramList, paramPositionNumber=4):", nth ({head: {value:12, next:{value:99, next:{value:37, next:null}}}},4));
+//function nth(paramList, paramPositionNumber) // в качестве аргументов принимает список и число,
 //а возвращает элемент на заданной позиции в списке или же undefined в случае отсутствия такого элемента
 function nth(paramList, paramPositionNumber) {
-  let element;
-                        
-  return element;
+  // let counter=0;
+  // for (key in paramList) {
+  //   if (key == 'value') {
+  //     counter++;
+  //     if (counter = paramPositionNumber) {
+  //       return paramList[key].value;
+  //     }
+  //   }
+  // }
+  return undefined;
 }
 console.log();
 //8888888888888888888888888888888888888888888888888888888888888888888
