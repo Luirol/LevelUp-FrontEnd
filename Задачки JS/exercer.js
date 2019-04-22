@@ -168,26 +168,20 @@ console.log("7.1 --> arrayToList:", arrayToList ([12, 99, 37]));
 //function arrayToList (paramArray) //создает список из массива
 function arrayToList (paramArray) {
   let _list = {};
-  let _next = null; //временная переменная //запоминаю последний NEXT //первоначально null //затем переопределяю на структуру
+  let _next = {next:null}; //временная переменная //запоминаю последний NEXT //первоначально null //затем переопределяю на структуру
   for (i=paramArray.length-1; i>=0 ;i--) {
-    _list.value = paramArray[i];
-    _list.next = _next;
-    //
-    _next = cloneObject(_list);
-    console.log("i=", i,'|', 'value=',paramArray[i] ,'|',"_next =", _next,'|',"_list =", _list);
+    _list = prepend(paramArray[i], _list);
+    // _list.value = paramArray[i];
+    // _list.next = _next.next;
+    // //
+    // _next.next = _list;
+    // console.log("i=", i,'|', 'value=',paramArray[i] ,'|',"_next =", _next,'|',"_list =", _list);
   } //for (i=paramArray.length; i>=0 ;i--)
   //
   return {head:_list};
 } //function arrayToList (paramArray)
-function cloneObject (paramObj) {
-  let a = {};
-  for (i=0 in paramObj) {
-    a[i] = paramObj[i];
-  }
-  a = paramObj;
-  return a;
-}
 //
+console.log('========================================');
 const list = {head: {value:12, next:{value:99, next:{value:37, next:null}}}}
 console.log("7.2 7.2 --> listToArray:", listToArray (list));
 //function listToArray (paramList) //создаёт массив из списка
@@ -207,13 +201,15 @@ function listToArray (paramList) {
 return map;
 } //function listToArray (paramList)
 
-
-
+console.log("7.... --> prepend (paramValue, paramList):", prepend (37, null));
+console.log("7.... --> prepend (paramValue, paramList):", prepend (99, prepend (37, null)));
+console.log("7.... --> prepend (paramValue, paramList):", prepend (12, prepend (99, prepend (37, null))));
 //function prepend (paramList) //получает элемент и создаёт новый список, где
 //этот элемент добавлен спереди к первоначальному списку
-function prepend (paramList) {
+function prepend (paramValue, paramList) {
   newList = {};
-                        
+  newList.value = paramValue;
+  newList.next = paramList;
   return newList;
 }
 
