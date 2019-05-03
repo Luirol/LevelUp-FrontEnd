@@ -1,0 +1,68 @@
+.flex-conteiner {
+  display: flex;
+  flex-wrap: nowrap;
+  /* justify-content: center; по умолч. row по ширине по середине */
+  /* align-items: flex-start; по умолч. row по высоте прижал к верху */
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+.body {
+  /*по заданию фиксированы размеры, поэтому без флекса*/
+  width: 800px;
+  height: 600;
+  border: 1px;
+}
+.brd {
+  border: 2px solid black; /* Параметры границы */
+}.brd-right {
+  border-right: 2px solid black; /* Параметры границы */
+}
+.header-color {
+  background: BlanchedAlmond; /* Цвет шапки */
+}
+.secondary-color {
+  background: Tan; /* Цвет фона */
+}
+.massage-color {
+  background: NavajoWhite; /* Цвет сообщения */
+}
+.flex-round-brd {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center; /* выравнял по ширине*/
+  align-items: center; /* выровнял по высоте */
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid black; /* Параметры границы */
+  background: BlanchedAlmond; /* Цвет фона */
+  border-radius: 30px; /* Радиус */
+}
+.h {
+  margin: 0 0 0 0; /* Поля вокруг текста */
+  padding: 0px 0px 0px 5px; /* Отступ слева */
+}
+.scroll-y {
+  /* overflow-x: scroll; /* прокрутка по горизонтали */
+  overflow-y: scroll; /* прокрутка по вертикали */
+  /* overflow: auto; /* свойство для прокрутки по горизонтали. Автоматом, если больше блока */
+}
+button {
+  background: none;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+}
+button:hover, button:focus {
+  color: hsla(108, 12%, 0%, 1);
+  box-shadow: -1px 1px 2px hsla(108, 62%, 42%, 1);
+  background-color: hsla(108, 62%, 92%, 1)
+}
+button:active {
+  color: hsla(108, 42%, 32%, 1);
+  box-shadow: -2px 4px 8px hsla(64, 64%, 42%, 1);
+  background-color: hsla(64, 64%, 92%, 1);
+}

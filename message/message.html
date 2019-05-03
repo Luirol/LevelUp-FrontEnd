@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>massage</title>
+    <link rel="stylesheet" type="text/css" href="message.css">
+</head>
+
+<body>
+    <div class="flex-conteiner row header-color brd" style="max-width:796px; height:70px;">
+        <div class="flex-conteiner column header-color" style="width:777px; height:70px; justify-content: center;">
+            <!-- шапка header 4px это бордер-->
+            <h3 class="h">Discussion topic: What about Bill?</h3>
+            <h5 class="h">Created by Your_name Created on Some_data</h5>
+        </div>
+        <div style="width:23px; height:70px;">
+            <button>&#10006;</button>
+        </div>
+    </div>
+    <div class="flex-conteiner row secondary-color scroll-y brd"
+        style="max-width:796px; height: 530px; padding: 5px 0px;">
+        <!-- весь блок сообщений целиком -->
+        <div class="flex-conteiner column" style="max-width: 800px; height: 530;">
+            <!-- нулевое сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Антох,прочитал тут про нововведение в последней версии js,которое
+                        позволяет избегать дублирования .then для промисов. Выглядит вообще компактненько и просто! Что
+                        скажешь? Небось ещё все криво работает?
+                    </h4>
+                </div>
+            </div>
+            <!-- первое сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> То, что в ES2018 появился метод Promise.prototype.finally,
+                        говорит
+                        о том, что в обозримом будущем можно ожидать
+                        очень высокого уровня его поддержки браузерами. Это значит, что то, для чего раньше
+                        приходилось
+                        использовать вспомогательные инструменты,
+                        созданные сторонними разработчиками, теперь может быть реализовано стандартными средствами.
+                        В каких ситуациях может пригодиться метод Promise.prototype.finally? Например — если при
+                        запуске
+                        промиса, используемого для загрузки чего-либо,
+                        начинает воспроизводиться некая анимация, в finally можно завершить эту анимацию. В блоке
+                        finally можно, например, закрыть некое модальное окно.
+                        На самом деле, существует множество ситуаций, в которых метод finally может оказаться
+                        полезным.
+                    </h4>
+                </div>
+            </div>
+            <!-- второе сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Ну то есть пока это ещё не имеет широкого использования?
+                    </h4>
+                </div>
+            </div>
+
+            <!-- третье сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Глянь на caniuse
+                    </h4>
+                </div>
+            </div>
+
+            <!-- четвертое сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Принято,погляжу
+                    </h4>
+                </div>
+            </div>
+            <!-- 5 сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> #полезное нашёл <a>
+                            https://codyhouse.co/blog/post/css-diagonal-containers </a>
+                    </h4>
+                </div>
+            </div>
+            <!-- 6 сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Принято,погляжу
+                    </h4>
+                </div>
+            </div>
+            <!-- 7 сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Принято,погляжу
+                    </h4>
+                </div>
+            </div>
+            <!-- 8 сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Принято,погляжу
+                    </h4>
+                </div>
+            </div>
+            <!-- 9 сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Принято,погляжу
+                    </h4>
+                </div>
+            </div>
+            <!-- 10 сообщение -->
+            <div class="flex-conteiner row" style="max-width: 800px;    align-items: stretch;">
+                <div class="flex-conteiner row secondary-color brd-right"
+                    style="width: 20%; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <!-- левая часть блока сообщения -->
+                    <div class="flex-round-brd primary-color">
+                        <!-- аватарка или инициалы в кружочке -->
+                        <h3> AE </h3>
+                    </div>
+                    <div class="flex-conteiner column">
+                        <!-- дата время справа от инициалов-->
+                        <h5 class="h"> 17.05.2017 </h5>
+                        <h5 class="h"> 19:26:18 </h5>
+                    </div>
+                </div>
+                <div class="flex-conteiner column" style="width: 80%; margin: 0px 5px 0px 5px;">
+                    <!-- правая часть блока сообщения -->
+                    <h5 class="h">
+                        <!-- ИмяФамилия автора сообщения --> Anton Efremenko </h5>
+                    <h4 class="h brd massage-color">
+                        <!-- одиночное сообщение --> Принято,погляжу
+                    </h4>
+                </div>
+            </div>
+
+        </div><!-- end блок сообщений целиком -->
+    </div>
+</body>
+
+</html>
