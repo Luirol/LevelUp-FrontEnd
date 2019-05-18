@@ -18,6 +18,7 @@ for (; i <= 100; i++) {
   if (i % 5 == 0) {
     myMessage += "Buzz"
   }
+  myMessage = (myMessage == "") ? i : myMessage;
   console.log(i, myMessage)
 }
 //
@@ -127,15 +128,28 @@ function range(a, b) {
   return myArray;
 } //function range (a, b)
 //
-//function sum (myArray) --> вычисляет общую сумму элементов числового массива
+// function sum (myArray) --> вычисляет общую сумму элементов числового массива
 function sum(myArray) {
-  let total = 0;
-  for (let i = 0; i < myArray.length; i++) {
-    total += myArray[i];
-  } //end for (let i = 0; i < myArray.length; i++)
-  return total;
+  //
+  //вариант1 (рабочий)
+  //   let total = 0;
+  //   for (let i = 0; i < myArray.length; i++) {
+  //     total += myArray[i];
+  //   } //end for (let i = 0; i < myArray.length; i++)
+  //   return total;
+  //
+  // // или вариант2 (то же рабочий): для каждого элемента массива запустить функцию, промежуточный результат передавать первым аргументом
+  //  const total = myArray.reduce(function(subTotal, valueArray) {
+  //   return subTotal + valueArray;
+  // }, 0);
+  // return total;
+  //
+  //или вариант3:
+  const reducer = (total, valueArray) => total + valueArray;
+  return myArray.reduce(reducer);
 } //function sum (myArray)
-//
+
+
 myArray = ""; myMessage = ""; i = 0; myWidth = 0; str = ""; valueArray = 0; a = 0; b = 0; total = 0; l = 0; //Очистил для повторного использования
 console.log();
 //6666666666666666666666666666666666666666666666666666666666666666666
@@ -143,14 +157,26 @@ console.log('6. Обращаем вспять массив: //666666666666666666
 //
 //function reverseArrayInPlace (paramArray) //меняет порядок элементов на обратный в том массиве, который был ей передан в качестве аргумента
 function reverseArrayInPlace(paramArray) {
-  let oldArray = paramArray.slice();
-  i = oldArray.length - 1; //начальное значение = длине массива
-  j = 0; //индекс в новом массиве
-  while (i >= 0) {
-    paramArray[i] = oldArray[j];
-    j++;
-    i--;
+  //вариант1 (рабочий)
+  // let oldArray = paramArray.slice();
+  // i = oldArray.length - 1; //начальное значение = длине массива
+  // j = 0; //индекс в новом массиве
+  // while (i >= 0) {
+  //   paramArray[i] = oldArray[j];
+  //   j++;
+  //   i--;
+  // }
+  //  вариант2
+  i = 0; //индекс1 в парамМассиве //начальное значение// например, первый элемент
+  j = paramArray.length - 1; //индекс2 в парамМассиве //конечное значение, например последний элемент
+  while (i <= j) {
+    a = paramArray[i];
+    paramArray[i] = paramArray[j];
+    paramArray[j] = a;
+    j--;
+    i++;
   }
+
   return paramArray;
 } //for (i=0; myArray.length; i++)
 //function reverseArray(paramArray) //получает массив как аргумент и выдаёт новый массив – с обратным порядком элементов
@@ -169,7 +195,7 @@ function reverseArray(paramArray) {
 //
 const myArray1 = ['Один', 'Два', 'Три', 'Четыре', 'Пять', 'Шесть', 'Семь'];
 console.log("6.1 Testing function reverseArray()");
-console.log( myArray1);
+console.log(myArray1);
 console.log(reverseArray(myArray1));
 console.log(myArray1);
 //
@@ -272,9 +298,9 @@ a = false; b = '1'; console.log("deepEqual(a(" + typeof (a) + ")=" + a + ", b(" 
 a = [1, 2, 3]; b = [1, 2, 3]; console.log("deepEqual(a(" + typeof (a) + ")=" + a + ", b(" + typeof (b) + ")=" + b + ") =", deepEqual(a, b));
 a = [1, 1, 1]; b = [3, 3, 3]; console.log("deepEqual(a(" + typeof (a) + ")=" + a + ", b(" + typeof (b) + ")=" + b + ") =", deepEqual(a, b));
 console.log("-----------------------------------------------------");
-a=isEven; b=isEven; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")="+b+") =", deepEqual (a, b));
+a = isEven; b = isEven; console.log("deepEqual(a(" + typeof (a) + ")=" + a + ", b(" + typeof (b) + ")=" + b + ") =", deepEqual(a, b));
 console.log("-----------------------------------------------------");
-a=isEven; b=reverseArray; console.log("deepEqual(a("+typeof(a)+")="+a+", b("+typeof(b)+")="+b+") =", deepEqual (a, b));
+a = isEven; b = reverseArray; console.log("deepEqual(a(" + typeof (a) + ")=" + a + ", b(" + typeof (b) + ")=" + b + ") =", deepEqual(a, b));
 console.log("-----------------------------------------------------");
 //function deepEqual (obj1, obj2) //принимает два значения и
 //возвращает true, только если это два одинаковых значения или это объекты, свойства которых имеют одинаковые значения
