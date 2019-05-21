@@ -327,3 +327,34 @@ function deepEqual(obj1, obj2) {
     return false;
   } //if (obj1 === obj2)
 } //function deepEqual (obj1, obj2)
+//
+//9999999999999999999999999999999999999999999999999999999999999999999
+console.log('9. Создание динамической функции из строки: //9999999999999999999999');
+// Я добавил тест jsperf для 4 различных способов создания функции из строки:
+
+// Использование RegExp с классом Function
+// var func = "function (a, b) { return a + b; }".parseFunction();
+
+// Использование класса Function с "return"
+// var func = new Function("return " + "function (a, b) { return a + b; }")();
+
+// Использование официального конструктора функций
+// var func = new Function("a", "b", "return a + b;");
+
+// Использование Eval
+// eval("var func = function (a, b) { return a + b; };");
+
+function v1sum(paramA,paramB) {
+  return paramA+paramB;
+}
+const textFunction1 = ""+v1sum; //получил текст функции1 //это строковое значение!
+a=1;
+b=2;
+console.log("v1sum("+a+","+b+")=", v1sum(a,b));
+//
+const nameFunction2 = "v2sum";
+const textFunction2 = textFunction1.replace("v1sum", nameFunction2); //получил текст функции2
+console.log(textFunction2);
+eval(textFunction2);
+console.log("v2sum("+a+","+b+")=", v2sum(a,b));
+
