@@ -358,3 +358,6 @@ console.log(textFunction2);
 eval(textFunction2);
 console.log("v2sum("+a+","+b+")=", v2sum(a,b));
 
+textFunction3 = v1sum;
+console.log(textFunction3(1,2));
+
